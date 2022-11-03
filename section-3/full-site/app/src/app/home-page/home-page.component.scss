@@ -1,0 +1,103 @@
+main {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    height: fit-content;
+
+    .card-container {
+        max-width: 950px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 18px;
+
+        .saved-articles {
+            gap: 18px;
+            flex-wrap: wrap;
+            display: flex;
+            flex-direction: column;
+
+            .flex-container {
+                justify-content: center;
+                margin: auto;
+                gap: 18px;
+                display: flex;
+                flex-wrap: wrap;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 18px;
+                }
+            }
+        }
+
+        .articles-read {
+            max-width: 950px;
+            height: fit-content;
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            .flex-container {
+                justify-content: center;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                div:nth-child(1) {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    gap: 18px;
+                }
+
+                div:nth-child(2) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    gap: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1500px) {
+    main {
+        flex-direction: column;
+
+        .card-container {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .profile {
+            padding-bottom: 40px;
+            margin: auto;
+        }
+    }
+}
+
+@media screen and (max-width:950px) {
+    main .card-container .saved-articles .flex-container .flex-group {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width:613px) {
+    main .card-container .saved-articles .flex-container .flex-group {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:480px) {
+    main .profile {
+        width: 100%;
+    }
+}

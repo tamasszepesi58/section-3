@@ -1,0 +1,64 @@
+.card-title {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 102, 51, 1);
+    font-size: 12px;
+
+    .container {
+        display: flex;
+        gap: 10%;
+
+        .category {
+            background: white;
+            height: 100%;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            transform: skew(-30deg);
+            width: fit-content;
+            padding: 0px 10px;
+            margin-left: 10%;
+
+            div {
+                transform: skew(30deg);
+                display: flex;
+                width: fit-content;
+                align-items: center;
+
+                img {
+                    height: 20px;
+                }
+
+                p {
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    .time {
+        min-width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        p {
+            color: white;
+        }
+
+        img {
+            height: 65%;
+        }
+    }
+
+    .date {
+        display: flex;
+        align-items: center;
+        color: white;
+        margin-right: 8px;
+    }
+}

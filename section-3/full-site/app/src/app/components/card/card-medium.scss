@@ -1,0 +1,51 @@
+.card-medium {
+    position: relative;
+    width: 614px;
+    height: 561px;
+    font-family: 'Roboto', sans-serif;
+
+    img {
+        height: 310px;
+        width: 100%;
+    }
+
+    .card-main {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0px 10px;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+
+            h2 {
+                font-weight: 900;
+                font-size: 30px;
+                line-height: 35px;
+            }
+        }
+
+        p {
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 27px;
+            text-align: justify;
+        }
+    }
+
+    .card-title {
+        position: absolute;
+        height: 38px;
+        width: 100%;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        display: flex;
+    }
+}

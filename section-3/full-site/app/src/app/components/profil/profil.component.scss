@@ -1,0 +1,192 @@
+* {
+    font-weight: 700;
+}
+
+$primaryColor: rgba(0, 102, 51, 1);
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    max-width: 456px;
+    height: fit-content;
+    text-align: center;
+    background: rgba(255, 255, 255, 1);
+    overflow: hidden;
+
+    p {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        margin-top: 4px;
+        color: $primaryColor;
+    }
+
+    .title {
+        margin-top: 34px;
+        margin-bottom: 23px;
+        color: $primaryColor;
+
+        h1 {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 47px;
+        }
+
+        p {
+            font-size: 32px;
+            line-height: 37px;
+            font-weight: 400;
+        }
+    }
+
+    .személyes-adatok {
+        margin-bottom: 22px;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+    }
+
+    .elérhetőségek {
+        margin-bottom: 15px;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+    }
+
+    .kedvenc-sportok {
+        margin-bottom: 20px;
+
+        .flex {
+            gap: 5px;
+            margin-top: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+
+            div {
+                display: flex;
+                gap: 5px;
+                background: $primaryColor;
+                border-radius: 68px;
+                padding: 4px 8px 4px 8px;
+
+                p {
+                    text-align: start;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: 0.25px;
+                    color: white;
+                }
+            }
+
+            div:hover {
+                background: rgb(78, 173, 78);
+            }
+        }
+    }
+
+    .sportesemények {
+        margin-bottom: 20px;
+
+        .flex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 4px;
+            align-items: center;
+
+            p {
+                letter-spacing: 0.25px;
+                font-size: 16px;
+                padding: 4px 8px;
+                text-align: center;
+                border-radius: 68px;
+                color: white;
+                background: $primaryColor;
+            }
+
+            p:hover {
+                background: rgb(78, 173, 78);
+            }
+        }
+    }
+
+    .bemutatkozás {
+        width: 100%;
+        margin: auto;
+        text-align: start;
+
+        p {
+            margin: auto;
+            width: 95%;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 28px;
+            text-align: justify;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .profile {
+        p {
+            font-size: 14px;
+        }
+
+        .kedvenc-sportok .flex div {
+            display: flex;
+            gap: 5px;
+            background: $primaryColor;
+            border-radius: 68px;
+            padding: 2px 4px 2px 4px;
+
+            img {
+                width: 15px;
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 20px;
+                letter-spacing: 0.25px;
+            }
+        }
+
+        .sportesemények .flex p {
+            letter-spacing: 0.25px;
+            font-size: 12px;
+            padding: 2px 4px;
+        }
+
+        .title {
+
+            img {
+                width: 40%;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 28px;
+            }
+
+            h1 {
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 20px;
+            }
+        }
+
+        .bemutatkozás .main p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}

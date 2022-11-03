@@ -1,0 +1,63 @@
+<app-header></app-header>
+
+<main (window:resize)="checkViewHeight()">
+
+    <div class="card-container">
+
+        <div class="saved-articles">
+
+            <app-title-bar [img]="[img[0]]" [text]="[text[0]]"></app-title-bar>
+
+            <div class="flex-container">
+
+                <app-card [size]="mobileView?size['small']: size['medium']"></app-card>
+                <app-card *ngIf="mobileView" [size]="size['small']"></app-card>
+
+                <div class="flex-group">
+                    <app-card [size]="size['small']"></app-card>
+                    <app-card [size]="size['small']"></app-card>
+                </div>
+
+                <app-card [size]="size['small']"></app-card>
+                <app-card [size]="size['small']"></app-card>
+                <app-card [size]="size['small']"></app-card>
+
+            </div>
+
+        </div>
+
+        <div class="articles-read">
+
+            <app-title-bar [img]="[img[1]]" [text]="[text[1]]"></app-title-bar>
+
+            <div class="flex-container">
+
+                <div>
+
+                    <app-card [size]="mobileView?size['small']: size['wide']"></app-card>
+                    <app-card [size]="mobileView?size['small']: size['wide']"></app-card>
+                    <app-card [size]="mobileView?size['small']: size['wide']"></app-card>
+
+                </div>
+
+                <div>
+
+                    <app-card [size]="size['small']"></app-card>
+                    <app-card [size]="size['small']"></app-card>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <app-profil class="profile"></app-profil>
+
+</main>
+
+<app-footer class="footer"></app-footer>
+
+<app-responsive-profile></app-responsive-profile>
+<app-login></app-login>

@@ -1,0 +1,172 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+header,
+.first-flex ul li header,
+header .first-flex,
+header .first-flex ul,
+header .first-flex ul li,
+header .last-flex,
+header .last-flex div,
+header .last-flex div:last-child {
+    display: flex;
+}
+
+header {
+    background: #006633;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    font-size: 30px;
+    justify-content: space-between;
+    margin-bottom: 85px;
+
+    .hamburger {
+        width: 40px;
+        margin-right: 30px;
+        margin-left: 30px;
+        cursor: pointer;
+    }
+
+    .logo {
+        height: 85px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .first-flex {
+        align-items: center;
+        flex-direction: row;
+
+        .mobile-logo {
+            display: none;
+            cursor: pointer;
+        }
+
+        ul {
+            align-items: center;
+
+            li {
+                margin-left: 30px;
+                list-style: none;
+                cursor: pointer;
+                align-items: center;
+
+                img {
+                    width: 36px;
+                }
+
+                a {
+                    font-size: 22px;
+                    margin-left: 10px;
+                    text-decoration: none;
+                    color: white;
+                }
+
+            }
+
+            li:hover {
+                a {
+
+                    text-decoration: underline;
+                }
+            }
+
+        }
+    }
+
+    .last-flex {
+        gap: 20px;
+
+        img {
+            width: 36px;
+        }
+
+        div {
+            align-items: center;
+            cursor: pointer;
+        }
+
+        :last-child {
+            margin-right: 10px;
+
+            :last-child {
+                border: 3px solid white;
+                border-radius: 50%;
+                width: 75px;
+                margin-left: 30px;
+            }
+
+
+        }
+    }
+
+    .app-search-bar {
+        position: absolute;
+        top: 85px;
+        left: 0px;
+        right: 0px;
+    }
+
+}
+
+//---------------Responsive SCSS------------------
+
+@media screen and (max-width:1450px) {
+
+    header .first-flex ul {
+        display: none;
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    header .app-search-bar {
+        position: absolute;
+        top: 45px;
+    }
+
+    header .first-flex .hamburger {
+        width: 30px;
+        margin: 10px;
+    }
+
+    header .logo {
+        height: 55px;
+        margin: 0px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    header .first-flex .mobile-logo {
+        width: 30px;
+        display: block;
+        margin-left: 10px;
+    }
+
+    header .last-flex div {
+        display: none;
+    }
+
+    header .last-flex div:last-child {
+        display: flex;
+        flex-direction: row-reverse;
+
+        :nth-child(1) {
+            margin: 0px;
+            width: 30px;
+        }
+
+        :nth-child(2) {
+            margin: 0px 15px 0px 0px;
+            width: 45px;
+            border: 2px solid white;
+        }
+    }
+}
