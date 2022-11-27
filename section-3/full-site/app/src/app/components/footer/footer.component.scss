@@ -116,16 +116,19 @@ footer {
         }
 
         div:nth-child(1) {
-            text-align: center;
             display: flex;
-            justify-content: space-evenly;
+            width: 85%;
+            max-width: 1524px;
+            justify-content: space-between;
+            margin: auto;
+            transform: translate(6%);
         }
 
         div:nth-child(2) {
-            margin-top: 20px;
             gap: 12px;
             display: flex;
-            margin-left: 35%;
+            margin-top: 20px;
+            justify-content: center;
         }
     }
 }
@@ -221,6 +224,17 @@ footer {
     }
 }
 
+@media screen and (max-width:610px) {
+
+    footer .footer-bottom {
+        div:nth-child(1) {
+            width: 100%;
+            justify-content: space-evenly;
+            transform: translate(0%);
+        }
+    }
+}
+
 @media screen and (max-width:550px) {
 
     footer {
@@ -282,35 +296,38 @@ footer {
                 }
             }
         }
-    }
 
-    footer .footer-bottom {
-        height: 117px;
-        margin-top: 20px;
+        .footer-bottom {
+            p {
+                font-size: 12px;
+                line-height: 14px;
+            }
 
-        p {
-            font-size: 12px;
-            line-height: 14px;
-        }
+            div:nth-child(1) {
+                p {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
 
-        div:nth-child(1) {
-            gap: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+                gap: 10px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
 
-        div:nth-child(2) {
-            margin-top: 10px;
-            gap: 0px;
-            display: flex;
-            justify-content: center;
+            div:nth-child(2) {
+                margin-top: 10px;
+                gap: 0px;
+                display: flex;
+                justify-content: center;
 
-            img {
-                width: 11px;
-                height: 11px;
+                img {
+                    width: 11px;
+                    height: 11px;
+                }
             }
         }
+
     }
 }
 
