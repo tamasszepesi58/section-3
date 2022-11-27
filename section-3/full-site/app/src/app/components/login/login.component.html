@@ -18,13 +18,13 @@
         <div class="Email">
 
             <input type="text" placeholder="probapeter l 1 234 @ gmail. corr">
-            <p>Hibás e-mail cím</p>
+            <p *ngIf="invalidEmail">Hibás e-mail cím</p>
 
         </div>
 
         <div class="password">
 
-            <input type="text" placeholder="Jelszó">
+            <input class="" type="text" placeholder="Jelszó">
             <img (click)="changePasswordType()" src="../../../assets/login/eye.svg" alt="">
 
         </div>
@@ -36,14 +36,14 @@
     <div class="remember-me">
 
         <div>
-            <div (click)="remember()"></div>
+            <div class="noRemember" (click)="remember()"></div>
         </div>
 
         <p>Emlékezz rám</p>
 
     </div>
 
-    <button class="submit">Bejelentkezés</button>
+    <button (click)="validateEmail()" class="submit">Bejelentkezés</button>
 
     <div class="separator">
 

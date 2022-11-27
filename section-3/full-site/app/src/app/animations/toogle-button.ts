@@ -7,10 +7,12 @@ export function toggleButtonAnimation() {
 
     if (!rememberMe) {
         button.style.marginLeft = buttonsParent.offsetWidth - button.offsetWidth + "px";
+        button.setAttribute("class", "remember")
         rememberMe = true;
         return;
     } if (rememberMe) {
         button.style.marginLeft = 0 + "px";
+        button.setAttribute("class", "noRemember")
         rememberMe = false;
         return;
     }
